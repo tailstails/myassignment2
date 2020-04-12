@@ -1,0 +1,9 @@
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\bin\Debug\200424274A2.exe.config
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\bin\Debug\200424274A2.exe
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\bin\Debug\200424274A2.pdb
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\200424274A2.csprojAssemblyReference.cache
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\_200424274A2.Calculator.resources
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\_200424274A2.Properties.Resources.resources
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\200424274A2.csproj.GenerateResource.cache
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\200424274A2.exe
+C:\Users\TaeTa\source\repos\200424274A2\200424274A2\obj\Debug\200424274A2.pdb

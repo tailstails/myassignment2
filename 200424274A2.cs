@@ -91,6 +91,13 @@ namespace _200424274A2
             resultOutput.Text += 9; 
         }
 
+        /// <summary>
+        /// These are the one press simple buttons that work all the time. 
+        /// Pretty much the sqrt, 1/X, decimal (.) and the +/- buttons
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         //This displays a negative sign only if there's not one there. If there is, it cuts it out and the number is positive
         private void plusNegativeBtn_Click(object sender, EventArgs e)
         {
@@ -104,5 +111,28 @@ namespace _200424274A2
                 resultOutput.Text = resultOutput.Text.Trim('-');
             }
         }
+
+        //This method checks to see if the decimal is there. If it isn't it adds only ONE decimal 
+        private void dotButton_Click(object sender, EventArgs e)
+        {
+            if (!resultOutput.Text.Contains('.'))
+            {
+                resultOutput.Text = resultOutput.Text + ".";
+            }
+        }
+
+        //This button uses the Math.sqrt function, and gives it the square root when the button is pressed
+        private void sqrtButton_Click(object sender, EventArgs e)
+        {
+            resultOutput.Text = Convert.ToString(Math.Sqrt(Convert.ToDouble(resultOutput.Text)));
+        }
+
+        //This button calculates the reciporal of a number when clicked
+        private void reciprocalButton_Click(object sender, EventArgs e)
+        {
+            resultOutput.Text = (1 / Convert.ToDouble(resultOutput.Text)).ToString();
+        }
+
+
     }
 }

@@ -265,24 +265,29 @@
             this.dotButton.TabIndex = 19;
             this.dotButton.Text = ".";
             this.dotButton.UseVisualStyleBackColor = true;
+            this.dotButton.Click += new System.EventHandler(this.dotButton_Click);
             // 
             // sqrtButton
             // 
+            this.sqrtButton.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.sqrtButton.Location = new System.Drawing.Point(418, 117);
             this.sqrtButton.Name = "sqrtButton";
             this.sqrtButton.Size = new System.Drawing.Size(68, 61);
             this.sqrtButton.TabIndex = 20;
             this.sqrtButton.Text = "sqrt";
             this.sqrtButton.UseVisualStyleBackColor = true;
+            this.sqrtButton.Click += new System.EventHandler(this.sqrtButton_Click);
             // 
             // reciprocalButton
             // 
+            this.reciprocalButton.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.reciprocalButton.Location = new System.Drawing.Point(418, 194);
             this.reciprocalButton.Name = "reciprocalButton";
             this.reciprocalButton.Size = new System.Drawing.Size(68, 61);
             this.reciprocalButton.TabIndex = 21;
             this.reciprocalButton.Text = "1/X";
             this.reciprocalButton.UseVisualStyleBackColor = true;
+            this.reciprocalButton.Click += new System.EventHandler(this.reciprocalButton_Click);
             // 
             // equalsButton
             // 
