@@ -19,6 +19,20 @@ namespace _200424274A2
 {
     public partial class Calculator : Form
     {
+        String operationSign = ""; //This will hold the operators like +, -, *, and /
+        
+        double firstValue = 0; // This will be the first number that holds a value
+        
+        String memory; //This will hold the memory of the number that is being stored in there
+        
+        double finalValue; // This holds the result of the final value
+        
+        double secondValue; //This holds the second value (or number)
+        
+
+
+
+
         public Calculator() //Out calculator class
         {
             InitializeComponent();
@@ -88,7 +102,7 @@ namespace _200424274A2
         // This displays the number 9 from the 9 button
         private void button9_Click(object sender, EventArgs e)
         {
-            resultOutput.Text += 9; 
+            resultOutput.Text += 9;
         }
 
         /// <summary>
@@ -134,5 +148,139 @@ namespace _200424274A2
         }
 
 
+
+        /// <summary>
+        /// We're making a back button and clear button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        //Our method uses a substring so that it only cuts off a portion of the number, by one number
+        //As kong as the length is greater than 0 of course
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            if (resultOutput.Text.Length > 0)
+            {
+
+                resultOutput.Text = resultOutput.Text.Substring(0, resultOutput.Text.Length - 1);
+            }
+        }
+
+        //Our method shall clear up any data from the memory, and the regular textbox
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            resultOutput.Text = "";
+            memory = "";
+            firstValue = 0;
+            secondValue = 0;
+
+
+        }
+
+
+        /// <summary>
+        /// Now, it'a time to give the basic operator buttons some life
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        //The textbox will convert the string values in the textboxes to doubles
+        //This is the division button
+        private void divisionButton_Click(object sender, EventArgs e)
+        {
+            firstValue = Double.Parse(resultOutput.Text);
+            resultOutput.Text = "";
+            operationSign = "/";
+        }
+
+        //The textbox will convert the string values in the textboxes to doubles
+        //This is the multipilcation button
+        private void multiplyButton_Click(object sender, EventArgs e)
+        {
+            firstValue = Double.Parse(resultOutput.Text);
+            resultOutput.Text = "";
+            operationSign = "*";
+        }
+
+        //The textbox will convert the string values in the textboxes to doubles
+        //This is the subtration button
+        private void subtractionButton_Click(object sender, EventArgs e)
+        {
+            firstValue = Double.Parse(resultOutput.Text);
+            resultOutput.Text = "";
+            operationSign = "-";
+        }
+
+        //The textbox will convert the string values in the textboxes to doubles
+        //This is the addition button
+        private void additionButton_Click(object sender, EventArgs e)
+        {
+            firstValue = Double.Parse(resultOutput.Text);
+            resultOutput.Text = "";
+            operationSign = "+";
+        }
+
+
+        /// <summary>
+        /// Now, it'a time to give the basic operator buttons some life by creating an equals button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+        //This is the equals button, where everything happens 
+        private void equalsButton_Click(object sender, EventArgs e)
+        {
+          
+            //Allows the textbox to take in a double
+
+            secondValue = Double.Parse(resultOutput.Text);
+
+            //If the sign is +, do addition
+            if (operationSign == "+")
+            {
+                finalValue = (firstValue + secondValue);
+                resultOutput.Text = Convert.ToString(finalValue);
+                firstValue = finalValue;
+            }
+
+            //If the sign is -, do subtraction
+            if (operationSign == "-")
+            {
+                finalValue = (firstValue - secondValue);
+                resultOutput.Text = Convert.ToString(finalValue);
+                firstValue = finalValue;
+            }
+
+            //If the sign is *, do multiplication
+            if (operationSign == "*")
+            {
+                finalValue = (firstValue * secondValue);
+                resultOutput.Text = Convert.ToString(finalValue);
+                firstValue = finalValue;
+            }
+
+            //When the person divides, if the division symbol is found, and user divides by 0..
+            //They get an error message 
+            //Or else, they get their result and no error message
+
+            if (operationSign == "/")
+            {
+                if (secondValue == 0)
+                {
+                    resultOutput.Text = "You cannot divide by 0. Try again please!";
+
+                }
+                else
+                {
+                    finalValue = (firstValue / secondValue);
+                    resultOutput.Text = Convert.ToString(finalValue);
+                    firstValue = finalValue;
+                }
+
+            }
+
+
+        }
     }
 }

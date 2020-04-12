@@ -124,6 +124,7 @@
             this.backButton.TabIndex = 6;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // clearButton
             // 
@@ -134,6 +135,7 @@
             this.clearButton.TabIndex = 7;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // button7
             // 
@@ -298,6 +300,7 @@
             this.equalsButton.TabIndex = 22;
             this.equalsButton.Text = "=";
             this.equalsButton.UseVisualStyleBackColor = true;
+            this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
             // 
             // divisionButton
             // 
@@ -308,6 +311,7 @@
             this.divisionButton.TabIndex = 23;
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = true;
+            this.divisionButton.Click += new System.EventHandler(this.divisionButton_Click);
             // 
             // multiplyButton
             // 
@@ -318,6 +322,7 @@
             this.multiplyButton.TabIndex = 24;
             this.multiplyButton.Text = "*";
             this.multiplyButton.UseVisualStyleBackColor = true;
+            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
             // 
             // subtractionButton
             // 
@@ -328,6 +333,7 @@
             this.subtractionButton.TabIndex = 25;
             this.subtractionButton.Text = "-";
             this.subtractionButton.UseVisualStyleBackColor = true;
+            this.subtractionButton.Click += new System.EventHandler(this.subtractionButton_Click);
             // 
             // additionButton
             // 
@@ -338,6 +344,7 @@
             this.additionButton.TabIndex = 26;
             this.additionButton.Text = "+";
             this.additionButton.UseVisualStyleBackColor = true;
+            this.additionButton.Click += new System.EventHandler(this.additionButton_Click);
             // 
             // Calculator
             // 
