@@ -173,7 +173,9 @@ namespace _200424274A2
         private void clearButton_Click(object sender, EventArgs e)
         {
             resultOutput.Text = "";
+
             firstValue = 0;
+
             secondValue = 0;
             
 
@@ -192,7 +194,9 @@ namespace _200424274A2
         private void divisionButton_Click(object sender, EventArgs e)
         {
             firstValue = Double.Parse(resultOutput.Text);
+
             resultOutput.Text = "";
+
             operationSign = "/";
         }
 
@@ -201,7 +205,9 @@ namespace _200424274A2
         private void multiplyButton_Click(object sender, EventArgs e)
         {
             firstValue = Double.Parse(resultOutput.Text);
+
             resultOutput.Text = "";
+
             operationSign = "*";
         }
 
@@ -210,7 +216,9 @@ namespace _200424274A2
         private void subtractionButton_Click(object sender, EventArgs e)
         {
             firstValue = Double.Parse(resultOutput.Text);
+
             resultOutput.Text = "";
+
             operationSign = "-";
         }
 
@@ -219,7 +227,9 @@ namespace _200424274A2
         private void additionButton_Click(object sender, EventArgs e)
         {
             firstValue = Double.Parse(resultOutput.Text);
+
             resultOutput.Text = "";
+
             operationSign = "+";
         }
 
@@ -242,24 +252,33 @@ namespace _200424274A2
             //If the sign is +, do addition
             if (operationSign == "+")
             {
+               
                 finalValue = (firstValue + secondValue);
+
                 resultOutput.Text = Convert.ToString(finalValue);
+
                 firstValue = finalValue;
             }
 
             //If the sign is -, do subtraction
             if (operationSign == "-")
             {
+                
                 finalValue = (firstValue - secondValue);
+                
                 resultOutput.Text = Convert.ToString(finalValue);
+                
                 firstValue = finalValue;
             }
 
             //If the sign is *, do multiplication
             if (operationSign == "*")
             {
+                
                 finalValue = (firstValue * secondValue);
+                
                 resultOutput.Text = Convert.ToString(finalValue);
+                
                 firstValue = finalValue;
             }
 
@@ -277,8 +296,11 @@ namespace _200424274A2
                 else
                 {
                     finalValue = (firstValue / secondValue);
+
                     resultOutput.Text = Convert.ToString(finalValue);
+                   
                     firstValue = finalValue;
+
                 }
 
             }
@@ -299,6 +321,7 @@ namespace _200424274A2
         {
 
             memory = resultOutput.Text;
+
             memoryOutput.Text = "M";
         }
 
@@ -306,6 +329,7 @@ namespace _200424274A2
         private void mcButton_Click(object sender, EventArgs e)
         {
             memory = "";
+
             memoryOutput.Text = "";
         }
 
@@ -320,6 +344,7 @@ namespace _200424274A2
         {
 
             memory = (Convert.ToDouble(resultOutput.Text)).ToString();
+
             memoryOutput.Text = "M";
         }
 
@@ -360,11 +385,13 @@ namespace _200424274A2
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('1') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 button1.PerformClick();
                 e.Handled = true;
             }
+
 
             if (e.KeyChar.Equals('2') || e.KeyChar.Equals(Keys.NumPad0))
             {
@@ -372,11 +399,13 @@ namespace _200424274A2
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('3') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 button3.PerformClick();
                 e.Handled = true;
             }
+
 
             if (e.KeyChar.Equals('4') || e.KeyChar.Equals(Keys.NumPad0))
             {
@@ -384,11 +413,13 @@ namespace _200424274A2
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('5') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 button5.PerformClick();
                 e.Handled = true;
             }
+
 
             if (e.KeyChar.Equals('6') || e.KeyChar.Equals(Keys.NumPad0))
             {
@@ -396,11 +427,13 @@ namespace _200424274A2
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('7') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 button7.PerformClick();
                 e.Handled = true;
             }
+
 
             if (e.KeyChar.Equals('8') || e.KeyChar.Equals(Keys.NumPad0))
             {
@@ -422,17 +455,20 @@ namespace _200424274A2
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('+') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 additionButton.PerformClick();
                 e.Handled = true;
             }
 
+
             if (e.KeyChar.Equals('-') || e.KeyChar.Equals(Keys.NumPad0))
             {
                 subtractionButton.PerformClick();
                 e.Handled = true;
             }
+
 
             if (e.KeyChar.Equals('*') || e.KeyChar.Equals(Keys.NumPad0))
             {
