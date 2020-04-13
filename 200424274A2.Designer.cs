@@ -65,6 +65,7 @@
             this.resultOutput.Size = new System.Drawing.Size(467, 31);
             this.resultOutput.TabIndex = 0;
             this.resultOutput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.resultOutput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.resultOutput_KeyPress);
             // 
             // memoryOutput
             // 
@@ -84,6 +85,7 @@
             this.mcButton.TabIndex = 2;
             this.mcButton.Text = "MC";
             this.mcButton.UseVisualStyleBackColor = true;
+            this.mcButton.Click += new System.EventHandler(this.mcButton_Click);
             // 
             // mrButton
             // 
@@ -94,6 +96,7 @@
             this.mrButton.TabIndex = 3;
             this.mrButton.Text = "MR";
             this.mrButton.UseVisualStyleBackColor = true;
+            this.mrButton.Click += new System.EventHandler(this.mrButton_Click);
             // 
             // msButton
             // 
@@ -104,6 +107,7 @@
             this.msButton.TabIndex = 4;
             this.msButton.Text = "MS";
             this.msButton.UseVisualStyleBackColor = true;
+            this.msButton.Click += new System.EventHandler(this.msButton_Click);
             // 
             // mplusButton
             // 
@@ -114,6 +118,7 @@
             this.mplusButton.TabIndex = 5;
             this.mplusButton.Text = "M+";
             this.mplusButton.UseVisualStyleBackColor = true;
+            this.mplusButton.Click += new System.EventHandler(this.mplusButton_Click);
             // 
             // backButton
             // 
@@ -301,6 +306,7 @@
             this.equalsButton.Text = "=";
             this.equalsButton.UseVisualStyleBackColor = true;
             this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
+            this.equalsButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.equalsButton_KeyPress);
             // 
             // divisionButton
             // 
@@ -380,6 +386,8 @@
             this.Controls.Add(this.resultOutput);
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Calculator_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

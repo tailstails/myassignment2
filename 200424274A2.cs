@@ -20,15 +20,18 @@ namespace _200424274A2
     public partial class Calculator : Form
     {
         String operationSign = ""; //This will hold the operators like +, -, *, and /
-        
+
         double firstValue = 0; // This will be the first number that holds a value
-        
-        String memory; //This will hold the memory of the number that is being stored in there
-        
+
+        String memory = ""; //This will hold the memory of the number that is being stored in there
+
         double finalValue; // This holds the result of the final value
-        
+
         double secondValue; //This holds the second value (or number)
+
+
         
+
 
 
 
@@ -170,9 +173,9 @@ namespace _200424274A2
         private void clearButton_Click(object sender, EventArgs e)
         {
             resultOutput.Text = "";
-            memory = "";
             firstValue = 0;
             secondValue = 0;
+            
 
 
         }
@@ -231,7 +234,7 @@ namespace _200424274A2
         //This is the equals button, where everything happens 
         private void equalsButton_Click(object sender, EventArgs e)
         {
-          
+
             //Allows the textbox to take in a double
 
             secondValue = Double.Parse(resultOutput.Text);
@@ -280,7 +283,165 @@ namespace _200424274A2
 
             }
 
+        }
+
+
+        /// <summary>
+        /// And for the final part of the calculator, the memory part
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+
+        //Displays the letter M when you press the M+ button
+        private void mplusButton_Click(object sender, EventArgs e)
+        {
+
+            memory = resultOutput.Text;
+            memoryOutput.Text = "M";
+        }
+
+        //This is the MC button that clears the memory that the calculator is holding 
+        private void mcButton_Click(object sender, EventArgs e)
+        {
+            memory = "";
+            memoryOutput.Text = "";
+        }
+
+        //This is the MR button, which recalls the current memory inside
+        private void mrButton_Click(object sender, EventArgs e)
+        {
+            resultOutput.Text = memory;
+        }
+
+        //This is the MS button, Here, we're saving / storing the memory inside
+        private void msButton_Click(object sender, EventArgs e)
+        {
+
+            memory = (Convert.ToDouble(resultOutput.Text)).ToString();
+            memoryOutput.Text = "M";
+        }
+
+
+        //Ignore this please, please.  
+        private void equalsButton_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        //Ignore this please, please.
+        private void Calculator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        
+        }
+
+        //Ignore this please, please.
+        private void Calculator_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+
+        /// <summary>
+        /// This is getting keyboard input from the user because they're bored of clicking on a button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+
+        //This allows someone to type in the numbers using the keyboard ranging from 0-9
+        private void resultOutput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals('0') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button0.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('1') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button1.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('2') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button2.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('3') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button3.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('4') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button4.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('5') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button5.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('6') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button6.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('7') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button7.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('8') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button8.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('9') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                button9.PerformClick();
+                e.Handled = true;
+            }
+
+
+            //Here you can also type out the operator via the keyboard
+            if (e.KeyChar.Equals('/') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                divisionButton.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('+') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                additionButton.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('-') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                subtractionButton.PerformClick();
+                e.Handled = true;
+            }
+
+            if (e.KeyChar.Equals('*') || e.KeyChar.Equals(Keys.NumPad0))
+            {
+                multiplyButton.PerformClick();
+                e.Handled = true;
+            }
+
 
         }
     }
+
 }
